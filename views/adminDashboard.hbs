@@ -1,0 +1,14 @@
+{{> header}}
+<div class="bg">
+    <p class="desc">Welcome - AdminDashboard</p>
+</div>
+<section class="container text-center my-4">
+    <div class="alert alert-danger container text-center my-4" role="alert">
+        <h2 class="text-center mt-2">Welcome {{fname}} {{lname}}</h2>
+        <h4 class="alert-heading">What would you like to do today?</h4>
+        <button type="button" class="btn btn-secondary btn-lg"><a href="/room/roomList">View lists</a></button>
+        <button type="button" class="btn btn-primary btn-lg"><a href="/room/add">Add a new room</a></button>
+    </div>
+</section>
+
+{{> footer}}

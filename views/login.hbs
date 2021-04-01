@@ -1,0 +1,31 @@
+{{> header}}
+<div class="bg">
+    <p class="desc">login</p>
+</div>
+<div class="container room-line mt-4">
+
+    {{#each messages}}
+    <div class="errors">{{this}}</div>
+    {{/each}}
+    <form name="form" action="/login" method="POST" enctype="application/x-www-form-urlencoded"
+        onsubmit="return validation()">
+
+        <div class="form-group">
+            <input id="email" name="email" value="{{email}}" type="email" placeholder="Email address"
+                class="form-control" />
+            <small id="email_error"></small>
+        </div>
+
+        <div class="form-group">
+            <input id="password2" type="password2" value="{{password2}}" name="password2"
+                placeholder="6-12 characters and contain one uppercase" class="form-control" />
+            <small id="pass2_error"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+            Sign-In
+        </button>
+    </form>
+</div>
+
+{{> footer}}

@@ -1,0 +1,31 @@
+{{> header}}
+
+{{#each rooms}}
+<div class="room-list">
+    <div class="room-detail">
+        <img src="{{pic}}" alt="">
+        <div class="room-content">
+            <div class="title">{{title}}</div>
+            <small class="description">{{description}}</small>
+            <div class="price">${{price}} CAD/night</div>
+            <div class="location">{{location}}</div>
+        </div>
+    </div>
+    {{#if ../isAdmin}}
+    <a href="/room/edit?id={{_id}}">
+        <button type="button" class="btn btn-primary"> Edit</button>
+    </a>
+    <a href="/room/delete/{{_id}}">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Delete
+        </button>
+    </a>
+    {{else}}
+    <a href="/room/detail/{{_id}}">
+        <button type="button" class="btn btn-primary">View</button>
+    </a>
+    {{/if}}
+</div>
+{{/each}}
+
+{{> footer}}

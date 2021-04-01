@@ -1,0 +1,49 @@
+[
+    {
+        "title": "Toronto Loft 7 with patio!",
+        "description": "Entire Apartment",
+        "price": "130",
+        "location": "Toronto",
+        "pic": "/images/room1.jpg"
+    },
+    {
+        "title": "Toronto Loft 12 Amazing Duplex",
+        "description": "Patio Apartment",
+        "price": "195",
+        "location": "Toronto",
+        "pic": "/images/room2.jpg"
+    },
+    {
+        "title": "Lisbon Sky View Loft",
+        "description": "View Apartment",
+        "price": "125",
+        "location": "Toronto",
+        "pic": "/images/room3.jpg"
+    }
+    ,
+    {
+        "title": "Lisbon night View Loft",
+        "description": "Small Apartment",
+        "price": "152",
+        "location": "Montreal",
+        "pic": "/images/room4.jpg"
+    }
+
+    ,
+    {
+        "title": "Vancouver Sky View Loft",
+        "description": "Medium Apartment",
+        "price": "110",
+        "location": "Vancouver",
+        "pic": "/images/room5.jpg"
+    }
+    ,
+    {
+        "title": "Rainbow view Loft",
+        "description": "Cozy Apartment",
+        "price": "150",
+        "location": "Vancouver",
+        "pic": "/images/room6.jpg"
+    }
+
+]

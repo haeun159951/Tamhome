@@ -1,0 +1,121 @@
+{{>header}}
+<section class="header">
+  <h1>Book unique places to stay and things to do</h1>
+  <div class="container">
+    <form class="form-booking">
+      <div id="form">
+        <div class="place">
+          <label>Where</label>
+          <select class="location form-control" id="searchLocation" name="location">
+            <option value="">Choose a city</option>
+            {{#each locations}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-grp">
+          <label>Check-in</label>
+          <input type="date" class="form-control select-date" />
+        </div>
+
+        <div class="input-grp">
+          <label>Check-out</label>
+          <input type="date" class="form-control select-date" />
+        </div>
+
+        <div class="guest">
+          <label>Guests</label>
+          <input min="1" type="number" class="form-control" placeholder="Add guests" />
+        </div>
+
+        <div class="input-grp">
+          <button type="button" id="roomSearch" class="btn btn-primary">
+            Search
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Informational image section -->
+<section class="card-deck">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/images/ad-1.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Entire home to stay</h5>
+            <p>
+              Experience the culture like any local and feel like my home
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/images/ad-3.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Amazing views</h5>
+            <p>Wake up to unforgettable vistas and sights</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/images/ad-2.jpg" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Natural areas</h5>
+            <p>Get in touch with nature. It’s only one step away</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Informational - Video section  -->
+
+<section class="video-info">
+  <div class="container">
+    <h1 class="text-center tm-heading">
+      Why TamHome is good for visitors?
+    </h1>
+    <div class="row">
+      <div class="col-md-6">
+        <iframe height="360" src="https://www.youtube.com/embed/TknrmpS4GOg"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6">
+        <p class="feature">
+          Wake up to a magnificent view of the CN Tower. Step out to the
+          tantalizing scents of Byward Market. Fall asleep under the stars
+          of the Yukon. All of it is possible with TamHome. TamHome is the
+          Korean word for explore and that's what we offer you: a chance to
+          explore and see what Canada has to offer. Of course, TamHome can
+          also refer to a home away from home and we here pride ourselves in
+          giving you access to the most scenic and adventurous locations.
+          Connected to over 100,000 local or natural or luxurious amenities,
+          TamHome will help you plan your next adventure: whether that means
+          St. John's, Newfoundland, or near your in-law's place at Kelowna.
+          After all, adventure is what you make of it.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Promotion section -->
+<section class="banner">
+  <div class="container">
+    <h1>Up to 30% OFF - Only in TamHome</h1>
+    <p>Book your cottage before 31st</p>
+    <button type="button" class="booking-btn">Book Now</button>
+  </div>
+</section>
+<!-- footer -->
+{{>footer}}

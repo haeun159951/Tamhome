@@ -1,0 +1,23 @@
+{{>header}}
+<div class="bg">
+  <p class="desc">Welcome at Tamhome - UserDashboard!</p>
+</div>
+<section class="container text-center my-4">
+  <div class="alert alert-danger container text-center my-4" role="alert">
+    <h4 class="alert-heading">Welcome {{fname}} {{lname}}</h4>
+    <p>
+      Now you are all set to place your first booking at Tamhome
+    </p>
+    <hr />
+    <p class="mb-0">
+      Whenever you need our help, please do not hesitate to contact us.
+    </p>
+    <a href="/room/roomList">
+      <button type="button" class="btn btn-primary">View lists</button>
+    </a>
+    <a href="/room/myBooking">
+      <button type="button" class="btn btn-primary">My booking</button>
+    </a>
+  </div>
+</section>
+{{>footer}}

@@ -1,0 +1,85 @@
+{{>header}}
+
+<div id="content-wrapper">
+  <div class="column">
+    <img class="img-fluid" src="{{room.pic}}" alt="" />
+  </div>
+
+  <div class="column">
+    <form class="room-line container" method="POST" action="/room/detail/{{room._id}}">
+      <h3 class="title font-weight-bold">{{room.title}}</h3>
+      <div class="description">{{room.description}}</div>
+      <div class="price">
+        <h3>${{room.price}}</h3>
+      </div>
+      <div class="location">{{room.location}}</div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="checkIn">Check-in</label>
+          <input type="date" name="checkIn" id="checkIn" class="form-control select-date" required />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="checkOut">Check-out</label>
+          <input type="date" name="checkOut" id="checkOut" class="form-control select-date" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="guestInput">Guests</label>
+        <input min="1" id="guestInput" type="number" class="form-control" placeholder="Add guests" required />
+      </div>
+
+      <div class="total-calculate">
+        <p>${{room.price}} <span id="total-price1" class="total-price">$0</span></p>
+        <hr>
+        <p>Total <span id="total-price2" class="total-price" style="color:black"><b>$0</b></span></p>
+        <input type="hidden" name="total" id="total" />
+      </div>
+
+      <button type="submit" class="book-now btn btn-primary btn-block">
+        Book Now
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+{{!-- room description --}}
+<div class="container">
+  <hr>
+  <!-- icon boxes -->
+  <div class="container">
+    <div class="row row-cols-4">
+      <div class="col">
+        <i class="fa fa-home fa-2x mb-3"></i>
+        <p>Entire Apartment</p>
+        <small>You'll have the entire house to yourself</small>
+      </div>
+
+      <div class="col">
+        <i class="fa fa-hand-sparkles fa-2x mb-3"></i>
+        <p>Clean</p>
+        <small>Committed to enhanced cleaning protocol</small>
+      </div>
+
+      <div class="col">
+        <i class="fa fa-calendar-minus fa-2x mb-3"></i>
+        <p>Cancellation policy</p>
+        <small>Add your trip dates to get the cancellation details for this
+          stay.</small>
+      </div>
+
+      <div class="col">
+        <i class="fa fa-door-closed fa-2x mb-3"></i>
+        <p>Self Check In</p>
+        <small>Check yourself in with the keypad</small>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>
+
+
+{{>footer}}
